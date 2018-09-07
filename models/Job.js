@@ -5,7 +5,7 @@ const jobSchema = new Schema({
     jobID: { type: Number, unique: true, required: true },
     store: { type: Number, required: true },
     customername: { type: String, required: true },
-    contact: { type: Number, required: true },
+    contact: { type: String, required: true },
     deviceDesc: { type: String, required: true },
     receivedDate: { type: Date, default: Date.now },
     receivedStaff: { type: String, required: true },

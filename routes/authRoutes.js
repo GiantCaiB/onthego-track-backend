@@ -25,9 +25,5 @@ router.post("/register", async (req, res, next) => {
   }
 });
 
-router.get("/test", async (req, res, next) => {
-  res.send({ "Test": "Success" });
-});
-
 module.exports = router;
 
