@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 const { Schema } = mongoose;
 
 const jobSchema = new Schema({
-    jobID: { type: Number, unique: true, required: true },
     store: { type: Number, required: true },
     customername: { type: String, required: true },
     contact: { type: String, required: true },
@@ -16,8 +15,8 @@ const jobSchema = new Schema({
     quotePrice: { type: Number },
     instore: { type: Boolean, required: true },
     accessories: { type: String, default: "N/A" },
-    confirmed: { type: Boolean },
-    fixed: { type: Boolean }
+    confirmed: { type: Boolean, default:false},
+    fixed: { type: Boolean, default:false}
 });
 
 jobSchema.set("toJSON", { virtuals: true });
