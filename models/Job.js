@@ -9,7 +9,6 @@ const jobSchema = new Schema({
     deviceDesc: { type: String, required: true },
     receivedDate: { type: Date, default: Date.now },
     receivedStaff: { type: String, required: true },
-    quoteDate: { type: Date },
     quoteStaff: { type: String },
     fullfilledDate: { type: Date },
     fullfilledStaff: { type: String },
