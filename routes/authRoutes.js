@@ -25,5 +25,14 @@ router.post("/register", async (req, res, next) => {
   }
 });
 
+router.get("/getAll", async (req, res, next) => {
+  try {
+    const users = await userService.getAll();
+    res.json(users);
+  } catch (err) {
+    next(err);
+  }
+});
+
 module.exports = router;
 
